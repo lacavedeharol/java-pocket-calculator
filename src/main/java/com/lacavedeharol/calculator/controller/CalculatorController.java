@@ -152,17 +152,22 @@ public class CalculatorController implements ActionListener, KeyListener {
      * @param operator
      */
     private void handleOperator(String operator) {
-        // Allow unary minus if displayResult is empty and we are starting a negative
-        // number
-        if (operator.equals(CalculatorConstants.BTN_SUBTRACT) && displayResult.isEmpty()) {
+        /*
+         * Allow unary minus if displayResult is empty and we are starting a negative
+         * number.
+         */
+        if (operator.equals(CalculatorConstants.BTN_SUBTRACT)
+                && (displayResult.isEmpty() || displayResult.equals("0.0"))
+                && displayOperation.isEmpty()) {
             displayResult = operator;
             return;
         }
 
         if (isLastCharacterOperator() && displayResult.isEmpty()) {
+            // Override the previous operator
             displayOperation = displayOperation.substring(0, displayOperation.length() - 1) + operator;
         } else if (!displayResult.isEmpty() && !"Error".equals(displayResult)) {
-
+            // Append current number and operator to displayOperation
             displayOperation += displayResult + operator;
             displayResult = "";
         }
@@ -183,7 +188,7 @@ public class CalculatorController implements ActionListener, KeyListener {
     /**
      * Checks if the last character in the display operation is an operator.
      *
-     * @return true if the last character is an operator, false otherwise
+     * @return true if the last character is an operator, false otherwise.
      */
     private boolean isLastCharacterOperator() {
         if (displayOperation.isEmpty()) {

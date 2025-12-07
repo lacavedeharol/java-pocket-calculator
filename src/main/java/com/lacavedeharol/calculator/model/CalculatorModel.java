@@ -37,8 +37,8 @@ public class CalculatorModel {
     /**
      * Converts an infix expression to a postfix expression.
      * 
-     * @param infix the infix expression to convert
-     * @return the postfix expression
+     * @param infix the infix expression to convert.
+     * @return the postfix expression.
      */
     private static String infixToPostfix(String infix) {
         StringBuilder postfix = new StringBuilder();
@@ -81,8 +81,8 @@ public class CalculatorModel {
     /**
      * Evaluates a postfix expression.
      * 
-     * @param postfix the postfix expression to evaluate
-     * @return the result of the evaluation
+     * @param postfix the postfix expression to evaluate.
+     * @return the result of the evaluation.
      */
     private static double evaluatePostfix(String postfix) {
         Stack<Double> stack = new Stack<>();
@@ -104,8 +104,8 @@ public class CalculatorModel {
     /**
      * Returns the precedence of an operator.
      * 
-     * @param operator the operator to get the precedence of
-     * @return the precedence of the operator
+     * @param operator the operator to get the precedence of.
+     * @return the precedence of the operator.
      */
     private static int getPrecedence(String operator) {
         return switch (operator) {
@@ -122,10 +122,10 @@ public class CalculatorModel {
      * Returns true if the first operator has higher or equal precedence than the
      * second operator.
      * 
-     * @param op1 the first operator
-     * @param op2 the second operator
+     * @param op1 the first operator.
+     * @param op2 the second operator.
      * @return true if the first operator has higher or equal precedence than the
-     *         second operator
+     *         second operator.
      */
     private static boolean hasHigherOrEqualPrecedence(String op1, String op2) {
         return getPrecedence(op1) >= getPrecedence(op2);
@@ -134,8 +134,8 @@ public class CalculatorModel {
     /**
      * Returns true if the given token is an operator.
      * 
-     * @param token the token to check
-     * @return true if the given token is an operator
+     * @param token the token to check.
+     * @return true if the given token is an operator.
      */
     private static boolean isOperator(String token) {
         return "+-*/".contains(token) && token.length() == 1;
@@ -153,10 +153,10 @@ public class CalculatorModel {
     /**
      * Applies the given operator to the given operands.
      * 
-     * @param a        the first operand
-     * @param b        the second operand
-     * @param operator the operator to apply
-     * @return the result of the operation
+     * @param a        the first operand.
+     * @param b        the second operand.
+     * @param operator the operator to apply.
+     * @return the result of the operation.
      */
     private static double applyOperator(double a, double b, String operator) {
         switch (operator) {

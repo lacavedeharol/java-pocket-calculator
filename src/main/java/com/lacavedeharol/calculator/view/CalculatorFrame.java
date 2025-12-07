@@ -17,7 +17,7 @@ public class CalculatorFrame extends JFrame {
         this.calculatorDisplayOperation = new CalculatorDisplayText("", Utilities.OPERATION_DISPLAY_HEIGHT);
         this.calculatorDisplayResult = new CalculatorDisplayText("0.0", Utilities.RESULT_DISPLAY_HEIGHT);
 
-        setTitle("Calculator");
+        setTitle("Pocket calculator");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setResizable(false);
 
@@ -31,7 +31,7 @@ public class CalculatorFrame extends JFrame {
     /**
      * Creates the main panel for the calculator.
      * 
-     * @return the main panel
+     * @return the main panel.
      */
     private JPanel createMainPanel() {
 

@@ -3,7 +3,6 @@ package com.lacavedeharol.calculator.view;
 public final class CalculatorConstants {
 
     private CalculatorConstants() {
-        // Prevent instantiation
     }
 
     // Button Labels

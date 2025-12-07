@@ -17,7 +17,8 @@ A functional desktop calculator application built with Java and Swing, featuring
 
 ## Project Structure
 
-```src/main/java/com/lacavedeharol/calculator/
+```
+src/main/java/com/lacavedeharol/calculator/
 ├── JavaPocketCalculator.java      # Application entry point.
 ├── controller/
 │   └── CalculatorController.java  # Event handling and user input processing.

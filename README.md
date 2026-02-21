@@ -81,4 +81,4 @@ java -jar target/java-pocket-calculator-1.0.0-SNAPSHOT.jar
 
 ## Author
 
-lacavedeharol
+- lacavedeharol

@@ -7,8 +7,6 @@ import javax.swing.JLabel;
 
 /**
  * CalculatorDisplayText class.
- * 
- * @author lacavedeharol
  */
 public class CalculatorDisplayText extends JLabel {
 

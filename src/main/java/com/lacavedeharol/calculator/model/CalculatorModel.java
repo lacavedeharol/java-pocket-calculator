@@ -8,11 +8,12 @@ import java.util.regex.Pattern;
 
 /**
  * Calculator model class.
- * 
- * @author lacavedeharol
  */
 public class CalculatorModel {
 
+    /**
+     * Token pattern for splitting the input operation.
+     */
     private static final Pattern TOKEN_PATTERN = Pattern.compile("((?<=[-+*/])|(?=[-+*/]))");
 
     /**

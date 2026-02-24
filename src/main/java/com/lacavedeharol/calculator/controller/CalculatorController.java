@@ -14,8 +14,6 @@ import java.util.Map;
 
 /**
  * Controller class for the calculator.
- * 
- * @author lacavedeharol
  */
 public class CalculatorController implements ActionListener, KeyListener {
 
@@ -79,9 +77,8 @@ public class CalculatorController implements ActionListener, KeyListener {
                     appendDecimalPoint();
                 }
                 case CalculatorConstants.BTN_EQUALS -> {
-                    if (!displayOperation.isEmpty()) {
+                    if (!displayOperation.isEmpty())
                         calculateResult();
-                    }
                 }
             }
         }

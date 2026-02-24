@@ -7,8 +7,6 @@ import javax.swing.JComponent;
 
 /**
  * Utilities class.
- * 
- * @author lacavedeharol
  */
 public class Utilities {
 

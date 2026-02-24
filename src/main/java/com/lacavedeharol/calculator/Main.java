@@ -6,8 +6,6 @@ import javax.swing.SwingUtilities;
 
 /**
  * Main class.
- * 
- * @author lacavedeharol
  */
 public class Main {
 
@@ -17,6 +15,9 @@ public class Main {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
+        /**
+         * Create and show the calculator frame on the event dispatch thread.
+         */
         SwingUtilities.invokeLater(() -> {
             new CalculatorController(new CalculatorFrame());
         });

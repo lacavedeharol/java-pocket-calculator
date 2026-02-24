@@ -8,8 +8,6 @@ import javax.swing.JPanel;
 
 /**
  * CalculatorFrame class.
- * 
- * @author lacavedeharol
  */
 public class CalculatorFrame extends JFrame {
 

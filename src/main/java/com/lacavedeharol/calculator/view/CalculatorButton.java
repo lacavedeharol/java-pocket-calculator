@@ -9,8 +9,6 @@ import javax.swing.JButton;
 
 /**
  * CalculatorButton class.
- * 
- * @author lacavedeharol
  */
 public class CalculatorButton extends JButton {
 

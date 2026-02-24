@@ -26,11 +26,10 @@ public class CalculatorModel {
             String postfix = infixToPostfix(inputOperation);
             double result = evaluatePostfix(postfix);
 
-            if (result == (long) result) {
+            if (result == (long) result)
                 return String.format("%d", (long) result);
-            } else {
+            else
                 return String.format("%s", result);
-            }
         } catch (Exception e) {
             return "Error";
         }
@@ -56,9 +55,8 @@ public class CalculatorModel {
                 boolean isFirstToken = (i == 0);
                 boolean isAfterOperator = (i > 0 && isOperator(tokens[i - 1]));
 
-                if (isFirstToken || isAfterOperator) {
+                if (isFirstToken || isAfterOperator)
                     processedTokens.add("0");
-                }
             }
             processedTokens.add(token);
         }
@@ -67,9 +65,8 @@ public class CalculatorModel {
             if (isNumeric(token)) {
                 postfix.append(token).append(" ");
             } else if (isOperator(token)) {
-                while (!stack.isEmpty() && hasHigherOrEqualPrecedence(stack.peek(), token)) {
+                while (!stack.isEmpty() && hasHigherOrEqualPrecedence(stack.peek(), token))
                     postfix.append(stack.pop()).append(" ");
-                }
                 stack.push(token);
             }
         }
@@ -172,9 +169,8 @@ public class CalculatorModel {
                 return a * b;
             }
             case "/" -> {
-                if (b == 0) {
+                if (b == 0)
                     throw new ArithmeticException("Division by zero.");
-                }
                 return a / b;
             }
             default ->
